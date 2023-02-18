@@ -8,5 +8,5 @@ class Device:
 		self.state: DeviceState = state
 		# TODO: Is a uniq identifier needed?
 
-	def toggleState(self):
-		pass
+	def toggleState(self) -> None:
+		self.state = DeviceState.OFF if self.state == DeviceState.ON else DeviceState.ON
