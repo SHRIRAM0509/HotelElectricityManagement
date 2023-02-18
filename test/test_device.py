@@ -2,10 +2,11 @@ import unittest
 
 from models.device import Device
 from models.device_state import DeviceState
+from models.device_type import DeviceType
 
 class TestDevice(unittest.TestCase):
 	def setUp(self):
-		self.device = Device(5, 1)
+		self.device = Device(DeviceType.LIGHT, 5, 1)
 		
 	def test_if_device_state_is_initially_on(self):
 		self.assertEqual(self.device.state, DeviceState.ON)
